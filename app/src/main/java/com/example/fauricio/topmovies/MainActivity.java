@@ -1,17 +1,12 @@
 package com.example.fauricio.topmovies;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.GridView;
-import android.widget.TextView;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 

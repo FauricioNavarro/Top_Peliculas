@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tv_titulo"
             android:text="Título"
-            android:textSize="15dp"
+            android:textSize="18sp"
             android:textColor="@android:color/black"/>
 
         <TextView

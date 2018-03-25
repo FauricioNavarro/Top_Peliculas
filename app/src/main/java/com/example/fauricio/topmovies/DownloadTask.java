@@ -34,18 +34,7 @@ public class DownloadTask extends AsyncTask<String,Void,String> {
 
             InputStream inputStream = httpURLConnection.getInputStream();
             InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-            /*
-            int i = 0;
-            int data = inputStream.read();
-            while(data != -1){
-                if(i==210000){
-                    break;
-                }
-                char caracter = (char)data;
-                resultado += caracter;
-                i++;
-                data = inputStreamReader.read();
-            }*/
+
             BufferedReader br = new BufferedReader(inputStreamReader);
             StringBuilder sb = new StringBuilder();
             String line;
