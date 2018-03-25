@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -32,6 +34,7 @@ public class DownloadTask extends AsyncTask<String,Void,String> {
 
             InputStream inputStream = httpURLConnection.getInputStream();
             InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+            /*
             int i = 0;
             int data = inputStream.read();
             while(data != -1){
@@ -42,8 +45,15 @@ public class DownloadTask extends AsyncTask<String,Void,String> {
                 resultado += caracter;
                 i++;
                 data = inputStreamReader.read();
+            }*/
+            BufferedReader br = new BufferedReader(inputStreamReader);
+            StringBuilder sb = new StringBuilder();
+            String line;
+            while ((line = br.readLine()) != null) {
+                sb.append(line + "\n");
             }
-            return resultado;
+            br.close();
+            return sb.toString();
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {

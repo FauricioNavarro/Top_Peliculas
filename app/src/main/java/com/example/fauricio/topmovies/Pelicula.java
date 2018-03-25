@@ -19,6 +19,12 @@ public class Pelicula {
         this.imagen = imagen;
     }
 
+    public Pelicula(String titulo, String estrella, String metascore) {
+        this.titulo = titulo;
+        this.estrella = estrella;
+        this.metascore = metascore;
+    }
+
     public String getTitulo() {
         return titulo;
     }
